@@ -1,0 +1,9 @@
+{
+  "name": "Namma Ooru Help",
+  "short_name": "Ooru Help",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#1769aa",
+  "icons": []
+}
