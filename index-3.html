@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1769aa">
+  <title>Namma Ooru Help</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="brand">🤝 Namma Ooru Help</div>
+      <div class="tagline">உதவி கேள் • உதவி செய் • நல்லதை பரப்பு</div>
+    </div>
+    <div class="points" id="points">🏆 0</div>
+  </header>
+
+  <main class="container">
+    <section class="welcome card">
+      <div>
+        <p class="small">Vanakkam! 👋</p>
+        <h1>உங்கள் பகுதியில்<br>உதவி செய்வோம்.</h1>
+        <p class="muted">சிறிய உதவியும் ஒருவருடைய நாளை மாற்றலாம்.</p>
+      </div>
+      <div class="heart">❤️</div>
+    </section>
+
+    <section class="hero-actions">
+      <button class="action help" id="needHelp">
+        <span class="icon">🆘</span>
+        <span><b>HELP VENUM</b><small>எனக்கு உதவி தேவை</small></span>
+        <span>›</span>
+      </button>
+      <button class="action give" id="canHelp">
+        <span class="icon">🤝</span>
+        <span><b>HELP PANREN</b><small>நான் உதவி செய்ய முடியும்</small></span>
+        <span>›</span>
+      </button>
+    </section>
+
+    <section class="section-title">
+      <h2>📍 அருகிலுள்ள உதவிகள்</h2>
+      <button class="text-btn" id="refresh">Refresh</button>
+    </section>
+
+    <section id="requests" class="requests"></section>
+
+    <section class="stats">
+      <div class="stat card"><b id="helpCount">0</b><span>நான் செய்த உதவி</span></div>
+      <div class="stat card"><b id="requestCount">0</b><span>நான் கேட்ட உதவி</span></div>
+      <div class="stat card"><b id="trust">New</b><span>Trust level</span></div>
+    </section>
+
+    <section class="safety card">
+      <h3>🛡️ Safety first</h3>
+      <p>OTP, password, bank details போன்ற sensitive தகவல்களை யாரிடமும் பகிர வேண்டாம். சந்தேகமான request-ஐ Report செய்யலாம்.</p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="active">🏠<span>Home</span></button>
+    <button id="nearbyBtn">📍<span>Nearby</span></button>
+    <button id="addBtn">➕<span>Help</span></button>
+    <button>🏆<span>Points</span></button>
+    <button>👤<span>Profile</span></button>
+  </nav>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+      <h2 id="modalTitle">உதவி தேவை</h2>
+      <label>என்ன உதவி வேண்டும்?</label>
+      <textarea id="description" placeholder="உதாரணம்: Bike puncture ஆயிடுச்சு..."></textarea>
+      <label>உங்கள் பகுதி</label>
+      <input id="area" placeholder="உதாரணம்: Kallakurichi">
+      <label>முக்கியத்துவம்</label>
+      <select id="priority">
+        <option value="normal">சாதாரணம்</option>
+        <option value="urgent">அவசரம்</option>
+      </select>
+      <button class="primary" id="submitRequest">Request Post பண்ணு</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
